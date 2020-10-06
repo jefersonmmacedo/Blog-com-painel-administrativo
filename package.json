@@ -1,0 +1,26 @@
+{
+  "name": "blog-com-painel-administrativo",
+  "version": "1.0.0",
+  "description": "Blog com painel administrativo e sistema de login",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jefersonmmacedo/Blog-com-painel-administrativo.git"
+  },
+  "author": "Jeferson Macedo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jefersonmmacedo/Blog-com-painel-administrativo/issues"
+  },
+  "homepage": "https://github.com/jefersonmmacedo/Blog-com-painel-administrativo#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
+  }
+}
