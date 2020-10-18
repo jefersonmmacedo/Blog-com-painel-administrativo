@@ -1,0 +1,21 @@
+<%- include('partials/header.ejs') %>
+<div class="container">
+  <%- include('partials/head.ejs') %>   
+    <div class="bloco-Individual">
+      <h2><%= article.title %></h2>
+      <h5><%= article.subtitle %></h5>
+      <hr>
+      <br>
+      <h6><%- article.body %></h6>
+      <br>
+      <div class="cat">
+        <p><%= article.category.title %></p>
+      </div> 
+  
+    </div>
+   
+    
+    <br><br>
+    
+</div>
+<%- include('partials/footer.ejs') %>

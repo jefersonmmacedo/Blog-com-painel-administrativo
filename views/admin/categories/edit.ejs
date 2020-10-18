@@ -1,0 +1,21 @@
+<%- include('../../partials/header-admin.ejs') %>
+<div class="container">
+
+  <%- include('../../partials/head-admin.ejs') %> 
+  <div class="categories">
+    <h1>Página de edição de categorias</h1>
+    <div class="formulario">
+        <form action="/admin/categories/update" method="POST">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nova Categoria</label>
+              <input type="text" class="form-control" id="title" name="title" placeholder="Digite o nome da categoria" value="<%=category.title %>">
+              <input type="hidden" id="id" name="id" value="<%=category.id %>">
+              <small id="emailHelp" class="form-text text-muted">O Slug da categoria será cadastrado automáticamente.</small>
+            </div>
+            <button type="submit" class="btn btn-dark">Atualizar</button>
+          </form>
+    </div>
+  </div>      
+  
+</div>
+<%- include('../../partials/footer-admin.ejs') %>

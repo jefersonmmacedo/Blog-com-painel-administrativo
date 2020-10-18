@@ -1,0 +1,187 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+  background-color: rgb(240, 253, 255);
+}
+
+.body-admin {
+    background-color: black;
+    color: #fff;
+}
+
+h1, h3 {
+    text-align: center;
+}
+.navbar {
+    margin-left: 121px;
+    margin-right: 121px;
+    margin-top: 10px;
+    background-color: rgb(21, 21, 21);
+    border-radius: 8px;
+    
+    }
+
+
+.image{
+  margin-top: 90px;
+}
+
+.categories{
+  margin-top: 80px;
+}
+.formulario {
+    margin-top: 30px;
+    width: 100%;
+  
+    border-radius: 8px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(21, 21, 21);
+}
+
+.tabela {
+  margin-top: 30px;
+  width: 80%;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.tabela2 {
+  margin-top: 30px;
+  width: 100%;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.footer {
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(23,162,184);
+    color: #fff;
+    text-align: center;
+  }
+
+
+
+  .footer-admin {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    color: white;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .footer-admin p {
+    margin-top: 10px;
+      margin-bottom: 10px;
+  }
+  .blocos{
+    display: flex;
+   
+  }
+
+  .bloco-principal{
+    width: 75%;
+    margin-right: 2%;
+   padding: 10px;
+    border-radius: 6px;
+  }
+
+  .bloco-noticia{
+  display: flex;
+  
+  border-radius: 6px;
+  }
+
+   .bloco-image img{
+     margin: 10px;
+     width: 270px;
+     
+    }
+
+   .bloco-text{
+    margin: 10px;
+   }
+
+   .bloco-text .cat {
+     background-color:rgb(45, 183, 204) ;
+     border-radius: 6px;
+     width: 55%;
+     padding: 0 3%;
+     text-align: center;
+     color: #fff;
+   }
+
+   .bloco-text h4{
+     text-align: left;
+     color: rgb(5, 104, 119);
+     
+   }
+
+   .bloco-text a{
+   text-decoration: none;
+  }
+
+   .bloco-text h6 {
+    font-weight: inherit;
+    color: rgb(21, 21, 21);
+   }
+
+   .bloco-Individual h2 {
+    text-align: center;
+     color: rgb(5, 104, 119);
+
+   }
+
+   .bloco-Individual h5 {
+    text-align: center;
+    margin: 20px;
+   }
+
+   .bloco-Individual h6 {
+    font-size: 20px;
+   }
+
+   .bloco-Individual .cat {
+    background-color:rgb(45, 183, 204) ;
+    border-radius: 6px;
+    width: 30%;
+    padding: 0 3%;
+    text-align: center;
+    color: #fff;
+  }
+
+
+  .bloco-lateral{
+    padding: 10px;
+    width:25% ;
+   
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 6px;
+  }
+
+  .bloco-lateral h6 {
+    color: rgb(5, 104, 119) ;
+    margin-left: 10px;
+  }
+
+  .bloco-lateral a {
+    text-decoration: none;
+  }
+
+  .bloco-lateral h6:hover {
+    color: rgb(45, 183, 204) ;
+  }

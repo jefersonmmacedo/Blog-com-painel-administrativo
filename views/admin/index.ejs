@@ -1,0 +1,18 @@
+<%- include('../partials/header-admin.ejs') %>
+<div class="container">
+
+  <%- include('../partials/head-admin.ejs') %>       
+    <h1>ADMNINISTRAÇÂO</h1>
+   
+    <div class="formulario">
+        <form action="/categories/save" method="POST">
+            <div class="form-group">
+              <label for="exampleInputEmail1">ADMNINISTRAÇÂO</label>
+              <input type="text" class="form-control" id="title" name="title" placeholder="Digite o nome da categoria">
+              <small id="emailHelp" class="form-text text-muted">O Slug da categoria será cadastrado automáticamente.</small>
+            </div>
+            <button type="submit" class="btn btn-dark">Cadastrar</button>
+          </form>
+    </div>
+</div>
+<%- include('../partials/footer-admin.ejs') %>
