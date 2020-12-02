@@ -30,6 +30,7 @@ connection
 //Renderizando a página inicial
 app.get("/", ( req, res) => {
     Article.findAll({
+        limit: 4,
         include: {model: Category},
         order: [
             ['id','DESC'] 
@@ -46,12 +47,14 @@ app.get('/category/:slug', (req, res) => {
     let slug = req.params.slug;
 
     Category.findOne({
+        order: [
+            ['id','DESC'] 
+            ],
         where: {
             slug: slug
         },
         include: [{model: Article}],
-        order: [['id', 'DESC']]
-    }).then( category => {
+        }).then( category => {
        if (category != undefined) {
         Category.findAll().then( categories => {
             res.render('index', {articles: category.articles, categories: categories})

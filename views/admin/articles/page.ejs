@@ -1,0 +1,58 @@
+<%- include('../../partials/header.ejs') %>
+<div class="container">
+  <%- include('../../partials/head.ejs') %>   
+  <div class="blocos">
+    <div class="bloco-principal">
+      <h3>Notícias Recentes</h3>
+      
+      <% result.articles.rows.forEach((article) => { %>
+        <hr>
+      <div class="bloco-noticia">
+        <div class="bloco-image">
+         <a href="/<%= article.slug %>"><img src="<%= article.image %>" alt=""></a> 
+        </div>
+        <div class="bloco-text">
+        <a href="/<%= article.slug %>"> <h4><%= article.title %></h4></a> 
+
+      <% /* %> ( Código comentado) <div class="cat">
+          <p><%= article.category.title %></p>
+        </div> <% */  %>  
+        
+        
+          <h6><%= article.subtitle %></h6>
+        </div>
+      </div>
+      <% }) %>  
+      <br>
+      
+    </div>
+    <div class="bloco-lateral">
+      <h3>Categorias</h3>
+      <hr>
+      <% categories.forEach((category) => { %>
+       <a href="/category/<%= category.slug %>"> <h6><%= category.title %></h6></a>
+        <% }) %> 
+    </div>
+  </div>   
+  <br>
+  <div class="row">
+    <div class="col col-12">
+        <% if (result.page > 2) {%>
+            <a href="/articles/page/<%= result.page -1 %>" style="float:left"> << Página Anterior</a>
+            <% } else if (result.page ==2 ) {%>
+                <a href="/" style="float:left"> << Página Anterior</a>
+                <% } %>
+
+
+      <% if (result.next) {%>
+        <a href="/articles/page/<%= result.page +1 %>" style="float:right">Próxima Página >></a>
+        <% } %>
+      
+      
+    </div>
+  </div>  
+    <br><br>
+    
+</div>
+<%- include('../../partials/footer.ejs') %>
+
