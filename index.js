@@ -2,12 +2,19 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const connection = require('./database/database');
+const session = require('express-session');
 const CategoriesController = require('./categories/CategoriesController');
-const ArticlesController = require('./articles/ArticlesController')
-const Category = require('./categories/Category')
-const Article = require('./articles/Article')
+const ArticlesController = require('./articles/ArticlesController');
+const UsersController = require('./users/UsersController');
+const Category = require('./categories/Category');
+const Article = require('./articles/Article');
+const User = require('./users/User');
+const adminAuth = require ('./middlewares/adminAuth');
 
-
+//Sessions
+app.use(session({
+    secret: "fluminense", cookie: {maxAge: 30000}
+}))
 //View Engine
 app.set('view engine', 'ejs');
 
@@ -89,13 +96,16 @@ app.get('/:slug', (req, res) => {
 });
 
 //Renderizando a página inicl da administração
-app.get("/admin/dashboard", ( req, res) => {
-    res.render("admin/index");
-});
+app.get("/admin/dashboard", (req, res) => {
+    res.render("admin/dashboard");    
+})
+                
+
 
 // utilizando as rotas externas
 app.use('/', CategoriesController)
 app.use('/', ArticlesController)
+app.use('/', UsersController)
 
 app.listen(80, () => {
     console.log("Servidor executando com sucesso!");

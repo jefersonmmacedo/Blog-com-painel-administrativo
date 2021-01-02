@@ -1,0 +1,23 @@
+<%- include('../partials/header-admin.ejs') %>
+<div class="container">
+
+    <br><br>
+     
+    <div class="formulario">
+        <form action="/admin/authenticate" method="POST">
+            <div class="form-group">
+              <img src="/img/logo-blog.png" alt="">
+              <hr>
+              <label for="exampleInputEmail1">Login</label>
+              <input type="text" class="form-control" id="emai" name="email" placeholder="Digite seu e-mail ou nome de usuário">
+              <label for="exampleInputEmail1">Senha</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha">
+              <small id="emailHelp" class="form-text text-muted" style="float: left;">Entrou aqui por engano?<a href="/"> Sim. Me leve de volta para a Página principal</a> .</small>
+              <br>
+              <br>
+            </div>
+            <button type="submit" class="btn btn-dark">Entrar</button>
+          </form>
+    </div>
+</div>
+<%- include('../partials/footer-admin.ejs') %>

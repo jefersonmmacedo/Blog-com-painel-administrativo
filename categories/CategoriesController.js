@@ -2,22 +2,19 @@ const express = require('express');
 const router = express.Router();
 const Category = require('./Category')
 const Slugify = require('slugify')
+const adminAuth = require ('../middlewares/adminAuth');
 
 
-//Rota para acesso dos visitantes do site
-router.get('/categories', (req, res) => {
-    res.send("Rote de Categorias criada")
-});
 
 //Rota administrativa para listagem das categorias
-router.get('/admin/categories', (req, res) => {
+router.get('/admin/categories',adminAuth, (req, res) => {
         Category.findAll().then(categories => {
         res.render('admin/categories/categories', {categories: categories});
     });
 });
 
 //Rota administrativa para adição de nova categoria
-router.get('/admin/categories/new', (req, res) => {
+router.get('/admin/categories/new',adminAuth, (req, res) => {
     res.render('admin/categories/new')
 });
 
@@ -94,6 +91,8 @@ router.post('/admin/categories/update', (req, res) => {
     })
 
 })
+
+
 
 
 module.exports = router

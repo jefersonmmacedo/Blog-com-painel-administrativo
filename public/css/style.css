@@ -34,7 +34,7 @@ h1, h3 {
 }
 .formulario {
     margin-top: 30px;
-    width: 100%;
+    width: 80%;
   
     border-radius: 8px;
     padding: 20px;
@@ -85,8 +85,8 @@ h1, h3 {
   }
 
   .footer-admin p {
-    margin-top: 10px;
-      margin-bottom: 10px;
+    margin-top: 5px;
+      margin-bottom: 5px;
   }
   .blocos{
     display: flex;

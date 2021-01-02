@@ -1,0 +1,25 @@
+<%- include('../partials/header-admin.ejs') %>
+<div class="container">
+<div>
+  <img src="<%= usuario.image %>" alt="">
+  <h1>Seja bem vindo <%= usuario.name %></h1>
+  <h2>E-mail: <%= usuario.email %></h2>
+  <h3>Imagem:<%= usuario.image %> </h3>
+</div>
+    <div>
+      <a href="/admin/articles/new" class="btn btn-success">Novo Artigo</a>
+      <a href="/admin/articles" class="btn btn-success" >Todos os Artigos</a>
+      <a href="/admin/categories/new" class="btn btn-success" >Nova Categoria</a>
+      <a href="/admin/categories" class="btn btn-success" >Todas as Categorias</a>
+      <a href="/admin/users" class="btn btn-success" >Todos Usuarios</a>
+      <a href="/admin/users/new" class="btn btn-success" >Adicionar Usuarios</a>
+      <a href="/logout" class="btn btn-success" >X Sair</a>
+      
+    </div>
+    <div>
+     
+
+    </div>
+    
+</div>
+<%- include('../partials/footer-admin.ejs') %>

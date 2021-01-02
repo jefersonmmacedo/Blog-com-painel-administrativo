@@ -2,15 +2,12 @@ const express = require('express');
 const Article = require('./Article');
 const router = express.Router();
 const Category = require('../categories/Category');
-const Slugify = require('slugify')
-
-router.get('/articles', (req, res) => {
-    res.send("Artigo Criado com sucesso!");
-});
+const Slugify = require('slugify');
+const adminAuth = require ('../middlewares/adminAuth');
 
 
 //Rota para listagem de artigos
-router.get('/admin/articles', (req, res) => {
+router.get('/admin/articles', adminAuth, (req, res) => {
     Article.findAll({
         order: [
             ['id','DESC'] 
@@ -24,7 +21,7 @@ router.get('/admin/articles', (req, res) => {
 
 
 //Rota da pagina de criacao de novo artigo
-router.get('/admin/articles/new', (req, res) => {
+router.get('/admin/articles/new', adminAuth, (req, res) => {
     Category.findAll().then(categories => {
         res.render('admin/articles/new', {categories: categories});
     });
@@ -155,5 +152,7 @@ router.get('/articles/page/:num', (req, res) => {
         })
     })
 });
+
+
 
 module.exports = router;

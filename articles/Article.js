@@ -3,6 +3,7 @@ const Sequelize = require('sequelize');
 const connection = require('../database/database');
 const Category = require('../categories/Category');
 
+
 // Criando a tabela de Artigos no banco de dados
 
 const Article = connection.define ('articles', {

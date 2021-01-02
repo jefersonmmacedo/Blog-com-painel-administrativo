@@ -1,0 +1,28 @@
+<%- include('../../partials/header-admin.ejs') %>
+<div class="container">
+
+  <%- include('../../partials/head-admin.ejs') %> 
+  <div class="categories">
+    <h1>Página de cadastro de Usuarios</h1>
+    <div class="formulario">
+        <form action="/admin/users/save" method="POST">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nome</label>
+              <input type="text" class="form-control" id="title" name="title" placeholder="Digite o nome da categoria">
+              <label for="exampleInputEmail1">E-mail</label>
+              <input type="email" class="form-control" id="title" name="title" placeholder="Digite o nome da categoria">
+              <label for="exampleInputEmail1">Login</label>
+              <input type="text" class="form-control" id="title" name="title" placeholder="Digite o nome da categoria">
+              <label for="exampleInputEmail1">Senha</label>
+              <input type="password" class="form-control" id="title" name="title" placeholder="Digite o nome da categoria">
+              <label for="exampleInputEmail1">Foto de perfil</label>
+              <input type="text" class="form-control" id="title" name="title" placeholder="Digite o nome da categoria">
+              <small id="emailHelp" class="form-text text-muted">Preencha completamente todos os campos</small>
+            </div>
+            <button type="submit" class="btn btn-dark">Cadastrar</button>
+          </form>
+    </div>
+  </div>      
+  
+</div>
+<%- include('../../partials/footer-admin.ejs') %>
